@@ -7,7 +7,7 @@ def fetch_season(year):
     races, offset = [], 0
     while True:
         r = requests.get(f"{BASE}/{year}/results.json",
-            params={"limit": 30, "offset": offset}, timeout=30)
+            params={"limit": 100, "offset": offset}, timeout=30)
         r.raise_for_status()
         data = r.json()["MRData"]
         races.extend(data["RaceTable"]["Races"])
