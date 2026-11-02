@@ -35,3 +35,4 @@ for year in [2023]:
     print(f"{year} saved. \n {len(races)}: saved entries.")
     print(json.dumps(races[0]["Results"][0], indent=2))
     
+
